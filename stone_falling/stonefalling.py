@@ -9,7 +9,6 @@ input.on_button_pressed(Button.B, on_button_pressed_b)
 
 rock: game.LedSprite = None
 position = 0
-bullet: game.LedSprite = None
 hero: game.LedSprite = None
 basic.show_leds("""
     . # # # .
@@ -46,7 +45,7 @@ def on_forever():
     rock = game.create_sprite(position, 0)
     for index2 in range(4):
         rock.change(LedSpriteProperty.Y, 1)
-        basic.pause(500)
+        basic.pause(300)
 
     if rock.is_touching_edge():
         rock.delete()
